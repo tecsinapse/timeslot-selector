@@ -4,7 +4,7 @@ import { DialogContent } from '@material-ui/core';
 import Dialog from '@material-ui/core/es/Dialog/Dialog';
 import PropTypes from 'prop-types';
 
-import { timeslotSelectorStyles } from './TimeslotSelectorStyles';
+import { timeslotSelectorStyles } from './timeslotSelectorStyles';
 
 import { defaultLabels } from './data-types';
 import TimeslotSelectorComponent from './TimeslotSelectorComponent';

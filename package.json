@@ -1,9 +1,27 @@
 {
   "name": "@tecsinapse/timeslot-selector",
   "description": "TecSinapse TimeslotSelector",
-  "version": "0.0.1",
+  "homepage": "https://github.com/tecsinapse/timeslot-selector#readme",
+  "version": "0.0.2",
   "main": "dist/index.cjs.js",
   "module": "build/index.js",
+  "author": {
+    "name": "TecSinapse"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tecsinapse/timeslot-selector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tecsinapse/timeslot-selector/issues"
+  },
+  "keywords": [
+    "react",
+    "selector",
+    "tecsinapse",
+    "timeslot",
+    "ui-kit"
+  ],
   "dependencies": {
     "@material-ui/core": "^4.2.1",
     "@material-ui/styles": "^4.2.1",
@@ -69,6 +87,7 @@
     "storybook": "start-storybook -p 9001 -c .storybook -s ./storybook-public",
     "storybook:build": "build-storybook -c .storybook -o docs/"
   },
+  "license": "MIT",
   "husky": {
     "hooks": {
       "post-commit": "git update-index --again",
@@ -86,22 +105,5 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
-  "sideEffects": false,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tecsinapse/timeslot-selector.git"
-  },
-  "keywords": [
-    "react",
-    "tecsinapse",
-    "ui-kit",
-    "timeslot",
-    "selector"
-  ],
-  "author": "TecSinapse",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/tecsinapse/timeslot-selector/issues"
-  },
-  "homepage": "https://github.com/tecsinapse/timeslot-selector#readme"
+  "sideEffects": false
 }

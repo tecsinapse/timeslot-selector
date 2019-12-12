@@ -4,7 +4,7 @@
 
 
 
-***@tecsinapse/timeslot-selector*** é uma biblioteca contendo um seletor de horários disponíveis em uma agenda
+***@tecsinapse/timeslot-selector*** é um componente `React` seletor de horários disponíveis em uma agenda
 
 ## Get Started
 

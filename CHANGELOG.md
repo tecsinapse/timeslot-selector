@@ -1,3 +1,8 @@
+## <small>0.0.3 (2019-12-12)</small>
+
+
+
+
 ## <small>0.0.2 (2019-12-12)</small>
 
 *  - Added style do selected item background color by props ([f2f9489](https://github.com/tecsinapse/timeslot-selector/commit/f2f9489))

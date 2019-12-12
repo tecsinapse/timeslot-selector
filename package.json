@@ -1,35 +1,15 @@
 {
-  "name": "@tecsinapse/ui-kit",
-  "description": "TecSinapse UI-KIT",
-  "version": "3.3.2",
+  "name": "@tecsinapse/timeslot-selector",
+  "description": "TecSinapse TimeslotSelector",
+  "version": "0.0.1",
   "main": "dist/index.cjs.js",
   "module": "build/index.js",
   "dependencies": {
-    "@date-io/luxon": "^1.1.0",
     "@material-ui/core": "^4.2.1",
-    "@material-ui/icons": "^4.2.1",
-    "@material-ui/pickers": "^3.1.2",
     "@material-ui/styles": "^4.2.1",
-    "@mdi/js": "^3.0.39",
-    "@mdi/react": "^1.1.0",
-    "@tecsinapse/es-utils": "^6.0.10",
-    "@tecsinapse/material-ui-color-picker": "^4.3.0",
-    "clsx": "^1.0.4",
-    "graphql-hooks": "^3.4.0",
+    "@tecsinapse/ui-kit": "^3.3.2",
     "luxon": "^1.11.2",
-    "material-ui-dots": "^2.0.0",
-    "material-ui-search-bar": "1.0.0-beta.13",
-    "prop-types": "^15.6.2",
-    "react-dropzone": "^10.0.2",
-    "react-select": "^2.3.0",
-    "react-sizeme": "^2.5.2",
-    "react-swipeable-views": "^0.13.1",
-    "react-text-mask": "^5.4.3",
-    "react-virtualized": "^9.21.0",
-    "react-window": "^1.5.1",
-    "text-mask-addons": "^3.8.0",
-    "text-mask-core": "^5.1.2",
-    "uniqid": "^5.0.3"
+    "prop-types": "^15.6.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
@@ -106,5 +86,22 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tecsinapse/timeslot-selector.git"
+  },
+  "keywords": [
+    "react",
+    "tecsinapse",
+    "ui-kit",
+    "timeslot",
+    "selector"
+  ],
+  "author": "TecSinapse",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tecsinapse/timeslot-selector/issues"
+  },
+  "homepage": "https://github.com/tecsinapse/timeslot-selector#readme"
 }

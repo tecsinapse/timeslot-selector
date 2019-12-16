@@ -1804,6 +1804,23 @@
     react-color "^2.17.0"
     recompose "^0.30.0"
 
+"@tecsinapse/pickers@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@tecsinapse/pickers/-/pickers-1.0.0.tgz#a8c621461da739d8b1b485db62019e6c692ebf64"
+  integrity sha512-wisoh4SijwGEwCsigJIE5nj0eXU0kgapmmUVXYy2Se+ecvls7Ffuo6qEY1El+1dPjb6a+uP7uh8lT37DSuRG2Q==
+  dependencies:
+    "@date-io/luxon" "^1.1.0"
+    "@material-ui/core" "^4.2.1"
+    "@material-ui/icons" "^4.2.1"
+    "@material-ui/pickers" "^3.1.2"
+    "@material-ui/styles" "^4.2.1"
+    "@tecsinapse/es-utils" "^6.0.10"
+    "@tecsinapse/material-ui-color-picker" "^4.3.0"
+    "@tecsinapse/ui-kit" "^3.3.2"
+    clsx "^1.0.4"
+    luxon "^1.11.2"
+    prop-types "^15.6.2"
+
 "@tecsinapse/ui-kit@^3.3.2":
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/@tecsinapse/ui-kit/-/ui-kit-3.3.2.tgz#f09d44daeea0a2169d06d3ab36a8448a19733820"

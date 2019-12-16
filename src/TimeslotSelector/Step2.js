@@ -9,7 +9,8 @@ import Card from '@material-ui/core/es/Card/Card';
 import CardContent from '@material-ui/core/es/CardContent/CardContent';
 import Chip from '@material-ui/core/es/Chip/Chip';
 
-import { Button, WeeklyCalendar } from '@tecsinapse/ui-kit';
+import { Button } from '@tecsinapse/ui-kit';
+import { WeeklyCalendar } from '@tecsinapse/pickers';
 
 const generateTimeSlots = (personAvailabilities, date, duration) => {
   const dateTimeSlots = personAvailabilities.availabilities

@@ -1,3 +1,8 @@
+## <small>1.0.1 (2019-12-16)</small>
+
+
+
+
 ## 1.0.0 (2019-12-16)
 
 * Renaming style util file ([440f1a3](https://github.com/tecsinapse/timeslot-selector/commit/440f1a3))

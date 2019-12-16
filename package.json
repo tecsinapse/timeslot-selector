@@ -2,7 +2,7 @@
   "name": "@tecsinapse/timeslot-selector",
   "description": "TecSinapse TimeslotSelector",
   "homepage": "https://github.com/tecsinapse/timeslot-selector#readme",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "main": "dist/index.cjs.js",
   "module": "build/index.js",
   "author": {

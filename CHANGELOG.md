@@ -1,3 +1,10 @@
+## 1.0.0 (2019-12-16)
+
+* Renaming style util file ([440f1a3](https://github.com/tecsinapse/timeslot-selector/commit/440f1a3))
+* Updating libs ([6eb2ce0](https://github.com/tecsinapse/timeslot-selector/commit/6eb2ce0))
+
+
+
 ## <small>0.0.3 (2019-12-12)</small>
 
 

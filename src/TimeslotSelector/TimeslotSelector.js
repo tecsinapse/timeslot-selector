@@ -1,7 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/styles';
-import { DialogContent } from '@material-ui/core';
-import Dialog from '@material-ui/core/es/Dialog/Dialog';
+import { Dialog, DialogContent } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
 import { timeslotSelectorStyles } from './timeslotSelectorStyles';

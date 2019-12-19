@@ -9,7 +9,7 @@ import { timeslotSelectorStyles } from './timeslotSelectorStyles';
 import { defaultLabels } from './data-types';
 import TimeslotSelectorComponent from './TimeslotSelectorComponent';
 
-class TimeslotSelector extends React.Component {
+export class TimeslotSelectorUnstyled extends React.Component {
   constructor(props) {
     super(props);
     const {
@@ -112,7 +112,7 @@ class TimeslotSelector extends React.Component {
   }
 }
 
-TimeslotSelector.defaultProps = {
+TimeslotSelectorUnstyled.defaultProps = {
   labels: defaultLabels,
   other: {},
   locale: 'pt-BR',
@@ -130,7 +130,7 @@ TimeslotSelector.defaultProps = {
   selectedEmailPerson: '',
 };
 
-TimeslotSelector.propTypes = {
+TimeslotSelectorUnstyled.propTypes = {
   labels: PropTypes.object,
   personsAvailabilities: PropTypes.arrayOf(PropTypes.object).isRequired,
   personsEmailSelected: PropTypes.arrayOf(PropTypes.string),
@@ -156,4 +156,8 @@ TimeslotSelector.propTypes = {
   ),
 };
 
-export default withStyles(timeslotSelectorStyles)(TimeslotSelector);
+export default TimeslotSelectorUnstyled;
+
+export const TimeslotSelector = withStyles(timeslotSelectorStyles)(
+  TimeslotSelectorUnstyled
+);

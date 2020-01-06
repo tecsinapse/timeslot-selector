@@ -1,0 +1,97 @@
+import { Meta, Story, Props, Source } from '@storybook/addon-docs/blocks';
+import TimeslotSelector from './TimeslotSelector';
+import {
+  TimeslotSelectorStory,
+  selectedEmailPerson,
+  selectedDate,
+  selectedTime,
+  onHandleScheduleTest,
+  style,
+  handleChange,
+  personsEmailSelected,
+  customStep
+} from './TimeslotSelectorStory';
+import { DivFlex } from '@tecsinapse/ui-kit/build/withFlexCenter';
+import { availabilities as personsAvailabilities } from './availabilities';
+
+<Meta
+  title="Timeslot Selector"
+  component={TimeslotSelector}
+  decorators={[
+    story => (
+      <DivFlex>
+        <div style={{ width: '700px', height: '500px' }}>{story()}</div>
+      </DivFlex>
+    ),
+  ]}
+/>
+
+# Timeslot Selector
+
+The Timeslot Selector component can receive the following props:
+
+<Props of={TimeslotSelector} />
+
+# Code snippets
+
+Here you can check the code snippet for the story.
+
+## Inline
+
+<Story name="Inline" parameters={{ docs: { disable: true } }}>
+  <TimeslotSelectorStory
+    style={style}
+    personsAvailabilities={personsAvailabilities}
+    selectedEmailPerson={selectedEmailPerson}
+    durations={[15, 20, 30]}
+    defaultDuration="20"
+    onWeekChange={obj => console.log(obj)}
+    onHandleSchedule={onHandleScheduleTest}
+    personsEmailSelected={personsEmailSelected}
+    selectedTime={selectedTime}
+    selectedDate={selectedDate}
+  />
+</Story>
+
+<Source id="timeslot-selector--inline" />
+
+## Modal
+
+<Story name="Modal" parameters={{ docs: { disable: true } }}>
+  <TimeslotSelectorStory
+    style={style}
+    personsAvailabilities={personsAvailabilities}
+    selectedEmailPerson={selectedEmailPerson}
+    durations={[15, 20, 30]}
+    defaultDuration="20"
+    dialog
+    openOpened
+    onWeekChange={obj => console.log(obj)}
+    onHandleSchedule={onHandleScheduleTest}
+    onCloseDialog={() => {}}
+    personsEmailSelected={personsEmailSelected}
+    selectedTime={selectedTime}
+    selectedDate={selectedDate}
+  />
+</Story>
+
+<Source id="timeslot-selector--modal" />
+
+## Custom Steps
+
+<Story name="Custom Steps" parameters={{ docs: { disable: true } }}>
+  <TimeslotSelectorStory
+    beforeSteps={customStep}
+    style={style}
+    personsAvailabilities={personsAvailabilities}
+    durations={[15, 20, 30]}
+    defaultDuration="20"
+    onWeekChange={obj => console.log(obj)}
+    onHandleSchedule={onHandleScheduleTest}
+    personsEmailSelected={personsEmailSelected}
+    selectedTime={selectedTime}
+    selectedDate={selectedDate}
+  />
+</Story>
+
+<Source id="timeslot-selector--custom-steps" />

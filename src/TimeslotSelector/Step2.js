@@ -1,13 +1,15 @@
 /* eslint-disable react/jsx-curly-newline */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Typography from '@material-ui/core/es/Typography/Typography';
-import Grid from '@material-ui/core/Grid';
-import Divider from '@material-ui/core/Divider';
+import {
+  Card,
+  CardContent,
+  Chip,
+  Divider,
+  Grid,
+  Typography,
+} from '@material-ui/core';
 import { DateTime } from 'luxon';
-import Card from '@material-ui/core/es/Card/Card';
-import CardContent from '@material-ui/core/es/CardContent/CardContent';
-import Chip from '@material-ui/core/es/Chip/Chip';
 
 import { Button } from '@tecsinapse/ui-kit';
 import { WeeklyCalendar } from '@tecsinapse/pickers';
@@ -186,20 +188,21 @@ export const Step2 = ({
           </Grid>
           {callCancel && (
             <Grid item>
-              <Button variant="error" onClick={callCancel}>
+              <Button customVariant="error" onClick={callCancel}>
                 {labels.buttonLabelCancel}
               </Button>
             </Grid>
           )}
           {callPreviousStep && (
             <Grid item>
-              <Button onClick={callPreviousStep} variant="secondary">
+              <Button onClick={callPreviousStep} customVariant="warning">
                 {labels.buttonLabelprevious}
               </Button>
             </Grid>
           )}
           <Grid item>
             <Button
+              customVariant="success"
               disabled={selectedPeopleTimeSlot == null}
               onClick={() =>
                 onHandleSchedule && onHandleSchedule(selectedPeopleTimeSlot)

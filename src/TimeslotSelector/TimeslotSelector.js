@@ -1,7 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/styles';
-import { DialogContent } from '@material-ui/core';
-import Dialog from '@material-ui/core/es/Dialog/Dialog';
+import { Dialog, DialogContent } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
 import { timeslotSelectorStyles } from './timeslotSelectorStyles';
@@ -9,7 +8,7 @@ import { timeslotSelectorStyles } from './timeslotSelectorStyles';
 import { defaultLabels } from './data-types';
 import TimeslotSelectorComponent from './TimeslotSelectorComponent';
 
-class TimeslotSelector extends React.Component {
+export class TimeslotSelectorUnstyled extends React.Component {
   constructor(props) {
     super(props);
     const {
@@ -112,7 +111,7 @@ class TimeslotSelector extends React.Component {
   }
 }
 
-TimeslotSelector.defaultProps = {
+TimeslotSelectorUnstyled.defaultProps = {
   labels: defaultLabels,
   other: {},
   locale: 'pt-BR',
@@ -130,7 +129,7 @@ TimeslotSelector.defaultProps = {
   selectedEmailPerson: '',
 };
 
-TimeslotSelector.propTypes = {
+TimeslotSelectorUnstyled.propTypes = {
   labels: PropTypes.object,
   personsAvailabilities: PropTypes.arrayOf(PropTypes.object).isRequired,
   personsEmailSelected: PropTypes.arrayOf(PropTypes.string),
@@ -156,4 +155,8 @@ TimeslotSelector.propTypes = {
   ),
 };
 
-export default withStyles(timeslotSelectorStyles)(TimeslotSelector);
+export default TimeslotSelectorUnstyled;
+
+export const TimeslotSelector = withStyles(timeslotSelectorStyles)(
+  TimeslotSelectorUnstyled
+);

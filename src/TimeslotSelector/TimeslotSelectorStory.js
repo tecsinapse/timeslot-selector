@@ -41,7 +41,7 @@ export const customStep = [
           name="a"
         />
         <Divider style={{ margin: 8 }} />
-        <Button onClick={callNextStep} variant="secondary">
+        <Button onClick={callNextStep} color="secondary" variant="contained">
           Próximo
         </Button>
       </div>

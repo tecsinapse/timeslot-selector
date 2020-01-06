@@ -62,21 +62,23 @@ export const Step1 = ({
         <Grid container alignContent="flex-end" justify="center" spacing={2}>
           {callCancel && (
             <Grid item>
-              <Button variant="error" onClick={callCancel}>
+              <Button customVariant="error" onClick={callCancel}>
                 {labels.buttonLabelCancel}
               </Button>
             </Grid>
           )}
           {callPreviousStep && (
             <Grid item>
-              <Button onClick={callPreviousStep} variant="secondary">
+              <Button onClick={callPreviousStep} customVariant="warning">
                 {labels.buttonLabelprevious}
               </Button>
             </Grid>
           )}
           {callNextStep && (
             <Grid item>
-              <Button onClick={callNextStep}>{labels.buttonLabelNext}</Button>
+              <Button onClick={callNextStep} customVariant="success">
+                {labels.buttonLabelNext}
+              </Button>
             </Grid>
           )}
         </Grid>

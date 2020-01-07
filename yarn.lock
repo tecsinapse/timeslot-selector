@@ -2618,10 +2618,10 @@
     react-color "^2.17.0"
     recompose "^0.30.0"
 
-"@tecsinapse/pickers@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@tecsinapse/pickers/-/pickers-1.0.0.tgz#a8c621461da739d8b1b485db62019e6c692ebf64"
-  integrity sha512-wisoh4SijwGEwCsigJIE5nj0eXU0kgapmmUVXYy2Se+ecvls7Ffuo6qEY1El+1dPjb6a+uP7uh8lT37DSuRG2Q==
+"@tecsinapse/pickers@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@tecsinapse/pickers/-/pickers-1.2.0.tgz#159f4182eb94f9f1bef6912ac8736132f6186b19"
+  integrity sha512-ZRGMOq/cinpz3lb6FYXm5MOuRxT3ZXKEmOdZRf0dQTtP6jQV9n/lHh9envN2nYxCHRKKvFa9eaTj4lisQq+WyA==
   dependencies:
     "@date-io/luxon" "^1.1.0"
     "@material-ui/core" "^4.2.1"
@@ -2630,47 +2630,15 @@
     "@material-ui/styles" "^4.2.1"
     "@tecsinapse/es-utils" "^6.0.10"
     "@tecsinapse/material-ui-color-picker" "^4.3.0"
-    "@tecsinapse/ui-kit" "^3.3.2"
+    "@tecsinapse/ui-kit" "^4.2.0-beta.0"
     clsx "^1.0.4"
     luxon "^1.11.2"
     prop-types "^15.6.2"
 
-"@tecsinapse/ui-kit@^3.3.2":
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/@tecsinapse/ui-kit/-/ui-kit-3.3.2.tgz#f09d44daeea0a2169d06d3ab36a8448a19733820"
-  integrity sha512-7GnJ5Fj2xa/gUSz0uy4o1s3ytBFiGfxDpkKI/1l9PmS3UY0XIyLdkdhUEiCOantIyXU5fwYvB2e127ASC7Il1A==
-  dependencies:
-    "@date-io/luxon" "^1.1.0"
-    "@material-ui/core" "^4.2.1"
-    "@material-ui/icons" "^4.2.1"
-    "@material-ui/pickers" "^3.1.2"
-    "@material-ui/styles" "^4.2.1"
-    "@mdi/js" "^3.0.39"
-    "@mdi/react" "^1.1.0"
-    "@tecsinapse/es-utils" "^6.0.10"
-    "@tecsinapse/material-ui-color-picker" "^4.3.0"
-    classnames "^2.2.6"
-    clsx "^1.0.4"
-    graphql-hooks "^3.4.0"
-    luxon "^1.11.2"
-    material-ui-dots "^2.0.0"
-    material-ui-search-bar "1.0.0-beta.13"
-    prop-types "^15.6.2"
-    react-dropzone "^10.0.2"
-    react-select "^2.3.0"
-    react-sizeme "^2.5.2"
-    react-swipeable-views "^0.13.1"
-    react-text-mask "^5.4.3"
-    react-virtualized "^9.21.0"
-    react-window "^1.5.1"
-    text-mask-addons "^3.8.0"
-    text-mask-core "^5.1.2"
-    uniqid "^5.0.3"
-
-"@tecsinapse/ui-kit@^4.2.0-beta.0":
-  version "4.2.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@tecsinapse/ui-kit/-/ui-kit-4.2.0-beta.0.tgz#5ba0e1692a6d2279cdd54c55df34f6a4b4b26038"
-  integrity sha512-bj2/ffu3Zl4PH/NHvaBDq9VrWMhgaqTw3KeAJfmq2UtHH8J0XmW95bpAUrnDcrCJLdb2FuXa2II0JJOC5PZTXw==
+"@tecsinapse/ui-kit@^4.2.0-beta.0", "@tecsinapse/ui-kit@^4.2.0-beta.2":
+  version "4.2.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@tecsinapse/ui-kit/-/ui-kit-4.2.0-beta.2.tgz#440ac619f4e59c89d399a96c57f4566d063a734c"
+  integrity sha512-cuvU3x7zOVqvmYlf2buhN0VIqzA6Yrn5mhGnV/ni3mB0bZVjN9DYXB2o+CMRe3QElB05Ez5IiaYaPDBR8oTjuQ==
   dependencies:
     "@material-ui/core" "^4.2.1"
     "@material-ui/icons" "^4.2.1"
@@ -4610,7 +4578,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.5, classnames@^2.2.6:
+classnames@^2.2.5:
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
   integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==

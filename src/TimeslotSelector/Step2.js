@@ -188,14 +188,22 @@ export const Step2 = ({
           </Grid>
           {callCancel && (
             <Grid item>
-              <Button customVariant="error" onClick={callCancel}>
+              <Button
+                customVariant="error"
+                onClick={callCancel}
+                variant="contained"
+              >
                 {labels.buttonLabelCancel}
               </Button>
             </Grid>
           )}
           {callPreviousStep && (
             <Grid item>
-              <Button onClick={callPreviousStep} customVariant="warning">
+              <Button
+                onClick={callPreviousStep}
+                customVariant="warning"
+                variant="contained"
+              >
                 {labels.buttonLabelprevious}
               </Button>
             </Grid>
@@ -203,6 +211,7 @@ export const Step2 = ({
           <Grid item>
             <Button
               customVariant="success"
+              variant="contained"
               disabled={selectedPeopleTimeSlot == null}
               onClick={() =>
                 onHandleSchedule && onHandleSchedule(selectedPeopleTimeSlot)

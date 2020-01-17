@@ -1,3 +1,13 @@
+## 1.1.0 (2020-01-17)
+
+* Fixing new button API from ui-kit ([a6141dc](https://github.com/tecsinapse/timeslot-selector/commit/a6141dc))
+* Moved from storiesOf to MDX format ([48065fd](https://github.com/tecsinapse/timeslot-selector/commit/48065fd))
+* Setup test ([f63b859](https://github.com/tecsinapse/timeslot-selector/commit/f63b859))
+* Updating deps ([22e81ab](https://github.com/tecsinapse/timeslot-selector/commit/22e81ab))
+* Updating deps ([49d00b8](https://github.com/tecsinapse/timeslot-selector/commit/49d00b8))
+
+
+
 ## <small>1.0.1 (2019-12-16)</small>
 
 

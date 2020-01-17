@@ -1,16 +1,5 @@
 import PropTypes from 'prop-types';
 
-export const defaultLabels = {
-  step1Label: 'Consultor e duração',
-  step2Label: 'Data e horário',
-  minuteslabel: 'minutos',
-  buttonLabelCancel: 'Cancelar',
-  buttonLabelNext: 'Avançar',
-  buttonLabelprevious: 'Voltar',
-  buttonLabelSchedule: 'Agendar',
-  noTimeSlotAvailable: 'Nenhum horário disponivel',
-};
-
 const Company = {};
 
 Company.propTypes = {

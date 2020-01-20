@@ -2,7 +2,7 @@
   "name": "@tecsinapse/timeslot-selector",
   "description": "TecSinapse TimeslotSelector",
   "homepage": "https://github.com/tecsinapse/timeslot-selector#readme",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "dist/index.cjs.js",
   "module": "build/index.js",
   "author": {
@@ -25,8 +25,8 @@
   "dependencies": {
     "@material-ui/core": "^4.2.1",
     "@material-ui/styles": "^4.2.1",
-    "@tecsinapse/ui-kit": "^4.2.0-beta.2",
     "@tecsinapse/pickers": "^1.2.0",
+    "@tecsinapse/ui-kit": "^4.2.0-beta.2",
     "luxon": "^1.11.2",
     "prop-types": "^15.6.2"
   },

@@ -1,3 +1,9 @@
+## 1.2.0 (2020-01-22)
+
+* @tecsinapse/ui-kit@4.0.0 ([22b2bb7](https://github.com/tecsinapse/timeslot-selector/commit/22b2bb7))
+
+
+
 ## <small>1.1.1 (2020-01-20)</small>
 
 * Improving props table ([a238de7](https://github.com/tecsinapse/timeslot-selector/commit/a238de7))

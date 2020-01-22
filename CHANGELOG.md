@@ -1,3 +1,10 @@
+## <small>1.1.1 (2020-01-20)</small>
+
+* Improving props table ([a238de7](https://github.com/tecsinapse/timeslot-selector/commit/a238de7))
+* Updating deps ([a4d59d8](https://github.com/tecsinapse/timeslot-selector/commit/a4d59d8))
+
+
+
 ## 1.1.0 (2020-01-17)
 
 * Fixing new button API from ui-kit ([a6141dc](https://github.com/tecsinapse/timeslot-selector/commit/a6141dc))

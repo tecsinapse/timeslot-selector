@@ -26,7 +26,7 @@
     "@material-ui/core": "^4.2.1",
     "@material-ui/styles": "^4.2.1",
     "@tecsinapse/pickers": "^1.3.0",
-    "@tecsinapse/ui-kit": "^4.0.0",
+    "@tecsinapse/ui-kit": "^4.0.10",
     "luxon": "^1.11.2",
     "prop-types": "^15.6.2"
   },

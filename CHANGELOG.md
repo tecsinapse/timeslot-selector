@@ -1,3 +1,9 @@
+## <small>1.2.1 (2020-01-27)</small>
+
+* Updating deps ([703f79a](https://github.com/tecsinapse/timeslot-selector/commit/703f79a))
+
+
+
 ## 1.2.0 (2020-01-22)
 
 * @tecsinapse/ui-kit@4.0.0 ([22b2bb7](https://github.com/tecsinapse/timeslot-selector/commit/22b2bb7))

@@ -7,4 +7,5 @@ module.exports = {
   transform: {
     '^.+\\.js$': 'babel-jest',
   },
+  setupFiles: ['jest-canvas-mock'],
 };

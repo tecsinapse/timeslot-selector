@@ -1,3 +1,11 @@
+## <small>1.2.2 (2020-03-11)</small>
+
+* Fixed test ([5416a4a](https://github.com/tecsinapse/timeslot-selector/commit/5416a4a))
+* Update .travis.yml ([b256bea](https://github.com/tecsinapse/timeslot-selector/commit/b256bea))
+* Updating deps ([1c8f269](https://github.com/tecsinapse/timeslot-selector/commit/1c8f269))
+
+
+
 ## <small>1.2.1 (2020-01-27)</small>
 
 * Updating deps ([703f79a](https://github.com/tecsinapse/timeslot-selector/commit/703f79a))

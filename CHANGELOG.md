@@ -1,3 +1,10 @@
+## <small>1.2.4 (2023-04-09)</small>
+
+* Bump lodash from 4.17.15 to 4.17.19 ([66b39f7](https://github.com/tecsinapse/timeslot-selector/commit/66b39f7))
+* Bump websocket-extensions from 0.1.3 to 0.1.4 ([8a2c516](https://github.com/tecsinapse/timeslot-selector/commit/8a2c516))
+
+
+
 ## <small>1.2.2 (2020-03-11)</small>
 
 * Fixed test ([5416a4a](https://github.com/tecsinapse/timeslot-selector/commit/5416a4a))

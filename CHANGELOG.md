@@ -1,5 +1,16 @@
 ## <small>1.2.3 (2023-04-09)</small>
 
+* [#184441] Possibilitar criação de atendimento de Oficina via Contato Ativo para outros chassis ([197aaad](https://github.com/tecsinapse/timeslot-selector/commit/197aaad)), closes [#184441](https://github.com/tecsinapse/timeslot-selector/issues/184441)
+* Bump lodash from 4.17.15 to 4.17.19 ([66b39f7](https://github.com/tecsinapse/timeslot-selector/commit/66b39f7))
+* Bump websocket-extensions from 0.1.3 to 0.1.4 ([8a2c516](https://github.com/tecsinapse/timeslot-selector/commit/8a2c516))
+* Release 1.2.3 ([7505707](https://github.com/tecsinapse/timeslot-selector/commit/7505707))
+* Release 1.2.3 ([069b3ae](https://github.com/tecsinapse/timeslot-selector/commit/069b3ae))
+* Release 1.2.4 ([f4a7ab1](https://github.com/tecsinapse/timeslot-selector/commit/f4a7ab1))
+
+
+
+## <small>1.2.3 (2023-04-09)</small>
+
 * Bump lodash from 4.17.15 to 4.17.19 ([66b39f7](https://github.com/tecsinapse/timeslot-selector/commit/66b39f7))
 * Bump websocket-extensions from 0.1.3 to 0.1.4 ([8a2c516](https://github.com/tecsinapse/timeslot-selector/commit/8a2c516))
 * Release 1.2.3 ([069b3ae](https://github.com/tecsinapse/timeslot-selector/commit/069b3ae))

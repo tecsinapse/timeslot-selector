@@ -1,18 +1,18 @@
 /* eslint-disable react/jsx-curly-newline */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import {
-  Card,
-  CardContent,
   Chip,
   Divider,
   Grid,
   Typography,
+  CardHeader,
+  CardContent,
 } from '@material-ui/core';
 import { DateTime } from 'luxon';
 
-import { Button } from '@tecsinapse/ui-kit';
 import { WeeklyCalendar } from '@tecsinapse/pickers';
+import { Card, Button, IconButton } from '@tecsinapse/ui-kit';
 
 const generateTimeSlots = (personAvailabilities, date, duration) => {
   const dateTimeSlots = personAvailabilities.availabilities
@@ -70,12 +70,31 @@ export const Step2 = ({
   selectedDate,
   selectedTime,
   selectedPerson,
+  mode,
+  availableVehicles,
   otherProps,
 }) => {
   const [defaultDate, setSelectedDate] = useState(
     selectedDate ? DateTime.fromISO(selectedDate) : DateTime.local()
   );
-  const [selectedPeopleTimeSlot, setSelectedPeopleTimeSlot] = useState(null);
+  const [statefulAvailableVehicles, setStatefulAvailableVehicles] = useState(
+    availableVehicles
+  );
+  const [selectedPeopleTimeSlot, setSelectedPeopleTimeSlot] = useState(
+    mode === 'SINGLE'
+      ? null
+      : {
+          schedulings: [],
+          otherProps,
+        }
+  );
+  const [currentVehicleId, setCurrentVehicleId] = useState(
+    mode === 'SINGLE'
+      ? null
+      : availableVehicles[0]
+      ? availableVehicles[0].uniqueId
+      : null
+  );
 
   const timeSlotsByPerson = mapByPerson(
     personsAvailabilities,
@@ -83,6 +102,7 @@ export const Step2 = ({
     selectedDuration
   );
   if (
+    mode === 'SINGLE' &&
     selectedPeople &&
     selectedPerson &&
     selectedDate &&
@@ -105,9 +125,76 @@ export const Step2 = ({
     }
   }
 
+  const findScheduledVehicle = uniqueId =>
+    selectedPeopleTimeSlot.schedulings.find(
+      scheduled => scheduled.uniqueId === uniqueId
+    );
+  const isChipSelected = (ts, email) => {
+    if (mode === 'SINGLE') {
+      return (
+        selectedPeopleTimeSlot &&
+        selectedPeopleTimeSlot.time === ts &&
+        selectedPeopleTimeSlot.email === email
+      );
+    }
+    return !!selectedPeopleTimeSlot.schedulings.find(
+      scheduled =>
+        scheduled.date === defaultDate.toISODate() &&
+        scheduled.time === ts &&
+        scheduled.email === email
+    );
+  };
+
+  const handleClickRemove = uniqueId => {
+    if (currentVehicleId === uniqueId) {
+      setCurrentVehicleId(null);
+    }
+    setStatefulAvailableVehicles(
+      statefulAvailableVehicles.filter(vehicle => vehicle.uniqueId !== uniqueId)
+    );
+    setSelectedPeopleTimeSlot({
+      ...selectedPeopleTimeSlot,
+      schedulings: selectedPeopleTimeSlot.schedulings.filter(
+        scheduled => scheduled.uniqueId !== uniqueId
+      ),
+    });
+  };
+
+  const handleClickTimeChip = (ts, person) => {
+    if (!currentVehicleId) {
+      return;
+    }
+    if (mode === 'SINGLE') {
+      setSelectedPeopleTimeSlot({
+        date: defaultDate.toISODate(),
+        time: ts,
+        email: person.email,
+        duration: selectedDuration,
+        otherProps,
+      });
+    } else {
+      const filtered = selectedPeopleTimeSlot.schedulings.filter(
+        scheduled => scheduled.uniqueId !== currentVehicleId
+      );
+      filtered.push({
+        uniqueId: currentVehicleId,
+        date: defaultDate.toISODate(),
+        time: ts,
+        email: person.email,
+        duration: selectedDuration,
+      });
+      setSelectedPeopleTimeSlot({
+        ...selectedPeopleTimeSlot,
+        schedulings: filtered,
+      });
+    }
+  };
+
   const handleDayChange = day => {
     setSelectedDate(day);
-    setSelectedPeopleTimeSlot(null);
+    if (mode === 'SINGLE') {
+      setSelectedPeopleTimeSlot(null);
+    }
   };
   const bull = <span className={classes.bullet}>•</span>;
 
@@ -126,6 +213,64 @@ export const Step2 = ({
       </div>
       <div className={classes.stepContent}>
         <div className={classes.stepContentScrolling}>
+          {mode === 'MULTI' && (
+            <div className={classes.vehicleCards}>
+              <Typography variant="h6">
+                Clique no veículo desejado abaixo e então escolha o horário ao
+                lado.
+              </Typography>
+              {statefulAvailableVehicles.map(vehicle => {
+                const scheduledVehicle = findScheduledVehicle(vehicle.uniqueId);
+                return (
+                  <Card
+                    key={vehicle.uniqueId}
+                    className={[
+                      classes.vehicleCardRoot,
+                      currentVehicleId === vehicle.uniqueId
+                        ? classes.vehicleCardRootSelected
+                        : '',
+                    ].join(' ')}
+                    onClick={() => setCurrentVehicleId(vehicle.uniqueId)}
+                  >
+                    <CardHeader
+                      title={
+                        <span>
+                          {vehicle.description}{' '}
+                          {scheduledVehicle ? (
+                            <small className={classes.timeSelectedBullet}>
+                              {bull}
+                              {' Horário selecionado'}
+                            </small>
+                          ) : (
+                            ''
+                          )}
+                        </span>
+                      }
+                      action={
+                        <IconButton
+                          onClick={e => {
+                            e.stopPropagation();
+                            handleClickRemove(vehicle.uniqueId);
+                          }}
+                        >
+                          {/* <CloseIcon/> */}
+                        </IconButton>
+                      }
+                      subheader={
+                        scheduledVehicle
+                          ? `${DateTime.fromISO(scheduledVehicle.date)
+                              .setLocale(locale)
+                              .toLocaleString(DateTime.DATE_SHORT)} ${
+                              scheduledVehicle.time
+                            }`
+                          : ''
+                      }
+                    ></CardHeader>
+                  </Card>
+                );
+              })}
+            </div>
+          )}
           <Grid item container direction="column" spacing={2}>
             {selectedPeople.map(key => {
               const person = timeSlotsByPerson[key];
@@ -141,9 +286,7 @@ export const Step2 = ({
                       </Typography>
                       {person.timeSlots.length ? (
                         person.timeSlots.map(ts =>
-                          selectedPeopleTimeSlot &&
-                          ts === selectedPeopleTimeSlot.time &&
-                          person.email === selectedPeopleTimeSlot.email ? (
+                          isChipSelected(ts, person.email) ? (
                             <Chip
                               key={ts}
                               className={classes.availabilityCardTime}
@@ -155,16 +298,9 @@ export const Step2 = ({
                               key={ts}
                               className={classes.availabilityCardTime}
                               label={ts}
-                              clickable
-                              onClick={() =>
-                                setSelectedPeopleTimeSlot({
-                                  date: defaultDate.toISODate(),
-                                  time: ts,
-                                  email: person.email,
-                                  duration: selectedDuration,
-                                  otherProps,
-                                })
-                              }
+                              clickable={mode === 'SINGLE' || currentVehicleId}
+                              disabled={mode !== 'SINGLE' && !currentVehicleId}
+                              onClick={() => handleClickTimeChip(ts, person)}
                             />
                           )
                         )
@@ -233,6 +369,8 @@ Step2.defaultProps = {
   selectedDate: '',
   selectedTime: '',
   selectedPerson: '',
+  mode: 'SINGLE',
+  availableVehicles: [],
 };
 
 Step2.propTypes = {
@@ -245,4 +383,11 @@ Step2.propTypes = {
   selectedTime: PropTypes.string,
   selectedPerson: PropTypes.string,
   otherProps: PropTypes.object,
+  mode: PropTypes.oneOf(['SINGLE', 'MULTI']),
+  availableVehicles: PropTypes.arrayOf(
+    PropTypes.shape({
+      uniqueId: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+    })
+  ),
 };

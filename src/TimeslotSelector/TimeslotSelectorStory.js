@@ -8,15 +8,30 @@ import { TimeslotSelector } from './TimeslotSelector';
 import { availabilities as personsAvailabilities } from './availabilities';
 
 export const personsEmailSelected = personsAvailabilities.map(p => p.email);
-
+export const availableVehicles = [
+  {
+    uniqueId: '1',
+    description: 'Actros 2546 | Placa: DZR 3311',
+  },
+  {
+    uniqueId: '2',
+    description: 'Chevrolet Onix 2012',
+  },
+  {
+    uniqueId: '3',
+    description: 'Mercedes Benz 2024',
+  },
+];
 export const selectedEmailPerson = 'ricardo.almeida@example.com.br';
 export const selectedDate = '2019-02-12';
 export const selectedTime = '08:00';
 
 export const onHandleScheduleTest = selected => {
-  alert(
-    `Usuário: ${selected.email}\nData: ${selected.date}\nHora: ${selected.time}\n`
-  );
+  alert(JSON.stringify(selected, null, 2));
+};
+
+export const onHandleScheduleMultiTest = selected => {
+  alert(JSON.stringify(selected, null, 2));
 };
 
 export const style = {

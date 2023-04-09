@@ -133,6 +133,8 @@ TimeslotSelectorUnstyled.defaultProps = {
   selectedTime: '',
   personsEmailSelected: [],
   selectedEmailPerson: '',
+  mode: 'SINGLE',
+  availableVehicles: [],
 };
 
 TimeslotSelectorUnstyled.propTypes = {
@@ -199,6 +201,13 @@ TimeslotSelectorUnstyled.propTypes = {
     PropTypes.shape({
       label: PropTypes.string.isRequired,
       component: PropTypes.func.isRequired,
+    })
+  ),
+  mode: PropTypes.oneOf(['SINGLE', 'MULTI']),
+  availableVehicles: PropTypes.arrayOf(
+    PropTypes.shape({
+      uniqueId: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
     })
   ),
 };

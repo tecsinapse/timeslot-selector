@@ -36,6 +36,8 @@ class TimeslotSelectorComponent extends React.Component {
       setSelectedPeople,
       setSelectedDuration,
       changeOtherProps,
+      mode = 'SINGLE',
+      availableVehicles = [],
     } = this.props;
     const steps = [];
 
@@ -117,6 +119,8 @@ TimeslotSelectorComponent.defaultProps = {
   selectedDate: '',
   selectedTime: '',
   selectedPerson: '',
+  mode: 'SINGLE',
+  availableVehicles: [],
 };
 
 TimeslotSelectorComponent.propTypes = {
@@ -143,6 +147,13 @@ TimeslotSelectorComponent.propTypes = {
   selectedDuration: PropTypes.string,
   selectedDate: PropTypes.string,
   selectedTime: PropTypes.string,
+  mode: PropTypes.oneOf(['SINGLE', 'MULTI']),
+  availableVehicles: PropTypes.arrayOf(
+    PropTypes.shape({
+      uniqueId: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+    })
+  ),
 };
 
 export default TimeslotSelectorComponent;

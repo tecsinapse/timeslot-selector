@@ -6,10 +6,12 @@ import {
   selectedDate,
   selectedTime,
   onHandleScheduleTest,
+  onHandleScheduleMultiTest,
   style,
   handleChange,
   personsEmailSelected,
-  customStep
+  customStep,
+  availableVehicles
 } from './TimeslotSelectorStory';
 import { DivFlex } from '@tecsinapse/ui-kit/build/withFlexCenter';
 import { availabilities as personsAvailabilities } from './availabilities';
@@ -76,6 +78,28 @@ Here you can check the code snippet for the story.
 </Story>
 
 <Source id="timeslot-selector--modal" />
+
+<Story name="Modal Multi" parameters={{ docs: { disable: true } }}>
+  <TimeslotSelectorStory
+    style={style}
+    personsAvailabilities={personsAvailabilities}
+    selectedEmailPerson={selectedEmailPerson}
+    durations={[15, 20, 30]}
+    defaultDuration="20"
+    dialog
+    openOpened
+    onWeekChange={obj => console.log(obj)}
+    onHandleSchedule={onHandleScheduleMultiTest}
+    onCloseDialog={() => {}}
+    personsEmailSelected={personsEmailSelected}
+    selectedTime={selectedTime}
+    selectedDate={selectedDate}
+    mode="MULTI"
+    availableVehicles={availableVehicles}
+  />
+</Story>
+
+<Source id="timeslot-selector--modal-multi" />
 
 ## Custom Steps
 
